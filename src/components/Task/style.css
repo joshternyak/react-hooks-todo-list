@@ -1,0 +1,43 @@
+.Task {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 90%;
+    background: #fff;
+    padding: 16px;
+    margin: 12px auto;
+    border: 1px solid #000;
+    user-select: none;
+    animation: task 0.2s ease-in-out;
+    transition: 0.2s;
+}
+
+@keyframes task {
+    from {
+        transform: scale(0.7);
+    }
+
+    to {
+        transform: scale(1);
+    }
+}
+
+.Task__controls {
+    display: flex;
+    align-items: center;
+}
+
+.Task__controls-btn {
+    background: rgb(90, 90, 90);
+    border-radius: 5px;
+    margin: 0px 10px;
+    padding: 7px 12px;
+    border: none;
+    cursor: pointer;
+    color: white;
+}
+
+.Task__controls-btn--close {
+    background: #a20000;
+    font-size: 18px;
+}

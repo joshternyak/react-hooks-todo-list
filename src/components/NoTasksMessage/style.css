@@ -1,0 +1,6 @@
+.NoTasksMessage {
+    border: 2px dashed black;
+    text-align: center;
+    padding: 4rem 8rem;
+    border-radius: 15px;
+}
