@@ -5,7 +5,20 @@ import CreateTaskForm from "../CreateTaskForm";
 import NoTasksMessage from "../NoTasksMessage";
 
 function TodoListApp() {
-    const [tasks, setTasks] = useState([]);
+    const [tasks, setTasks] = useState([
+        {
+            title: 'Read a book',
+            completed: false
+        },
+        {
+            title: 'Learn React hooks',
+            completed: false
+        },
+        {
+            title: 'Do 20 pushups',
+            completed: true
+        },
+    ]);
     const [tasksRemaining, setTasksRemaining] = useState(0);
 
     const addTask = (title) => {
