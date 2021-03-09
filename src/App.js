@@ -11,14 +11,16 @@ function App() {
                     A todo list app built with React
                     Hooks by a 16 year old front-end
                     web developer: {' '}
-                    <a href="https://joshternyak.com" target="_blank">Josh
+                    <a href="https://joshternyak.com" rel="noreferrer"
+                       target="_blank">Josh
                         Ternyak</a>.</p>
             </div>
             <TodoListApp/>
             <footer>
                 <p>
                     It's an open source project {' '}
-                    <a target="_blank" href="https://github.com/joshternyak/react-hooks-todo-list">
+                    <a target="_blank" rel="noreferrer"
+                       href="https://github.com/joshternyak/react-hooks-todo-list">
                         on Github
                     </a>
                 </p>

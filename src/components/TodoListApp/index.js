@@ -20,6 +20,7 @@ function TodoListApp() {
         },
     ]);
     const [tasksRemaining, setTasksRemaining] = useState(0);
+    let tasksText;
 
     const addTask = (title) => {
         const newTasks = [...tasks, {title, completed: false}];
@@ -48,10 +49,22 @@ function TodoListApp() {
         setTasksRemaining(tasks.filter(task => !task.completed).length)
     }, [setTasksRemaining, tasks]);
 
+    if (tasksRemaining > 1) {
+        tasksText = 'tasks';
+    }
+
+    if (tasksRemaining === 1) {
+        tasksText = 'task'
+    }
+
+    if (tasksRemaining < 1) {
+        tasksText = 'tasks'
+    }
+
     return (
         <div className="TodoListApp">
             <CreateTaskForm addTask={addTask}/>
-            <h2>{tasksRemaining} tasks to complete</h2>
+            <h2>{tasksRemaining} {tasksText} to complete</h2>
             <div className="TodoListApp__tasks">
                 {tasks.length > 0 ? tasks.map((task, index) => (
                     <Task
